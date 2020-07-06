@@ -1,0 +1,68 @@
+<!--
+    We can change button's color by applying to its attribute a one of 3 levels of colors: primary, accent, warn
+-->
+
+<div>
+  <!-- Standard buttons -->
+  <button mat-button>Click me!</button>
+  <button mat-raised-button>Click me!</button>
+  <button mat-flat-button>Click me!</button>
+  <button mat-stroked-button>Click me!</button>
+</div>
+<br /><br />
+
+<div>
+  <!-- Circular buttons -->
+  <button mat-icon-button>Icon</button>
+  <button mat-fab>Fab</button>
+  <button mat-mini-fab>Minifab</button>
+</div>
+<br /><br />
+
+<div>
+  <!-- Colors -->
+  <button color="primary" mat-button>Primary</button>
+  <button color="accent" mat-button>Accent</button>
+  <button color="warn" mat-button>Warn</button>
+  <button color="primary" mat-raised-button>Primary</button>
+  <button color="accent" mat-raised-button>Accent</button>
+  <button color="warn" mat-raised-button>Warn</button>
+</div>
+<br /><br />
+
+<div>
+  <!-- Disabling a Ripple effect on the button (animation) -->
+  <button disableRipple color="warn" mat-raised-button>Warn</button>
+</div>
+<br /><br />
+<div>
+  <!-- Button Toggle -->
+  <mat-button-toggle #toggleBtn1>Toggle</mat-button-toggle>
+  {{ toggleBtn1.checked }}
+  <br />
+  <mat-button-toggle disabled>Toggle</mat-button-toggle>
+  {{ toggleBtn1.checked }}
+  <br />
+  <mat-button-toggle #toggleBtn2 checked disableRipple>
+    Toggle</mat-button-toggle
+  >
+  {{ toggleBtn2.checked }}
+</div>
+
+<div>
+  <!-- Radio-like behaviour: Group of button toggle elements -->
+  <mat-button-toggle-group #toggleGroup1="matButtonToggleGroup">
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ toggleGroup1.value }}
+  <br />
+  <!-- Checbox-like behaviour: Group of button toggle elements with multiple choices ('multiple' attr) -->
+  <mat-button-toggle-group multiple #toggleGroup2="matButtonToggleGroup">
+    <mat-button-toggle value="angular">Angular</mat-button-toggle>
+    <mat-button-toggle value="react">React</mat-button-toggle>
+    <mat-button-toggle value="vue">Vue</mat-button-toggle>
+  </mat-button-toggle-group>
+  {{ toggleGroup2.value }}
+</div>
